@@ -1,0 +1,21 @@
+.navbar {
+
+    .container-fluid{
+        .navbar-brand {
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                margin-right: 15px;
+            }
+        }
+    }
+    .navbar-nav{
+        margin-left: auto;
+
+        li {
+            margin: 0 15px;
+            padding: 10px 0;
+        }
+    }
+}

@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+}
+#homePrincipal {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba(0, 98, 185, 0.8),
+    rgba(0, 37, 70, 0.8)
+  );
+  display: flex;
+  color: whitesmoke;
+  padding-top: 10%;
+
+  .mainText {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 6em;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    p {
+      font-size: 1.5em;
+      padding-top: 30px;
+    }
+    a {
+      background-color: whitesmoke;
+      padding: 10px 70px;
+      border-radius: 10px;
+      color: rgb(59, 58, 58);
+      text-decoration: none;
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+  }
+  .sideButtons {
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 5px;
+    a {
+      border: 2px solid white;
+      margin: 1px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+#aboutMe {
+  min-height: 100vh;
+  background-color: #e6e6e6;
+  .introductionBanner {
+    text-align: center;
+    padding: 10% 10%;
+    font-size: 1.5em;
+    h2{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2em;
+    }
+    /*padding-top: 10%;*/
+  }
+
+  .articleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    article {
+      max-width: 50%;
+      padding-bottom: 10%;
+    }
+
+    .knowMe {
+      p {
+        margin-bottom: 10%;
+        text-align: left;
+      }
+      a {
+        margin: 5% 0;
+        color: white;
+        background-color: #0062b9;
+        padding: 10px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+    }
+
+    .skills {
+      display: flex;
+      flex-direction: column;
+      span {
+        background-color: rgb(190, 190, 190);
+        padding: 10px;
+        border-radius: 5px;
+      }
+      div {
+        margin: 10px 0 35px;
+      }
+    }
+  }
+}
+
+#projects {
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+
+  .mainTextProjects {
+    text-align: center;
+    padding: 5% 10%;
+    font-size: 1.5em;
+    h2{
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2em;
+    }
+  }
+
+  .projectContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .projectArticles {
+      width: 40vw;
+
+      img {
+        max-width: 100%;
+      }
+
+      div {
+        padding: 0 10%;
+
+        p {
+          margin-bottom: 10%;
+        }
+
+        a {
+          margin: 5% 0;
+          color: white;
+          background-color: #0062b9;
+          padding: 10px 30px;
+          border-radius: 5px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  background: linear-gradient(
+    to right,
+    rgba(0, 98, 185, 0.8),
+    rgba(0, 37, 70, 0.8)
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+
+  .contactMainText{
+    color: whitesmoke;
+    h2 {
+      font-size: 3em;
+      padding-top: 50px;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    p {
+      font-size: 1.5em;
+      padding: 50px 50px;
+    }
+    text-align: center;
+  }
+
+  form {
+    background-color: #fafafa;
+    width: 70vw;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    
+    .contactContainer {
+
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        padding: 3% 5%;      
+        
+        label {
+          display: block;
+          padding-bottom: 10px;
+        }
+        input {
+          background-color: #e6e6e6;
+          display: block;
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+        }
+        textarea {
+          background-color: #e6e6e6;
+          display: block;
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+        }        
+      }
+      div {
+        display: flex;
+        justify-content: end;
+        .submitBtn {
+          margin: 5% 0;
+          color: white;
+          background-color: #0062b9;
+          padding: 15px 50px;
+          border-radius: 5px;
+          text-decoration: none;      
+        }
+      }   
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  #homePrincipal {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 20%;
+    .mainText{
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: 1.3em;
+      }
+    }
+    .sideButtons {
+      display: flex;
+      flex-direction: row;
+      padding: 30px;
+      a{
+        margin: 0 5px;
+      }
+    }
+  }
+
+  #projects{
+      
+    .projectContainer {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10%;
+
+      .projectArticles{
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 60%;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 425px) {
+  #homePrincipal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .mainText {
+      width: 100vw;
+      text-align: center;
+      padding: 10% 5%;
+      p {
+        line-height: 1.9em;
+      }
+    }
+  }
+
+  #aboutMe {
+    .introductionBanner {
+      font-size: 1.2em;
+      line-height: 1.9em;
+    }
+
+    .articleContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      article {
+        max-width: 90%;
+      }
+      .knowMe{
+        text-align: center;
+      }
+      .skills {
+        align-items: center;
+      }
+    }
+
+  }
+  #projects{
+    .mainTextProjects{
+      font-size: 1em;
+    }
+  }
+  #contact {
+    .contactMainText{
+      p{
+        line-height: 1.9em;
+        font-size: 1.2em;
+      }
+    }
+    form {
+      width: 90vw;
+    }
+  }
+}
