@@ -23,10 +23,44 @@
       font-size: 6em;
       font-family: 'Bebas Neue', sans-serif;
     }
+
+    .pulser{
+      width: 20px;
+      height: 40px;
+      margin-top: 40px;
+      border-radius: 60px;
+      border: 2px solid white;
+      position: relative;
+    }
+
+    .pulser::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #e6e6e6;
+      top: 7px;
+      left: 4px;
+      border-radius: 100%;
+      animation-name: movement;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+     }
+
+     :before {
+      @keyframes movement {
+        from {transform: translateY(0);}
+
+        to {transform: translateY(20px);}
+      }
+     }
+
     p {
       font-size: 1.5em;
       padding-top: 30px;
     }
+
     a {
       background-color: whitesmoke;
       padding: 10px 70px;
@@ -59,7 +93,13 @@
 #aboutMe {
   min-height: 100vh;
   background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .introductionBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 10% 10%;
     font-size: 1.5em;
@@ -67,7 +107,14 @@
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2em;
     }
-    /*padding-top: 10%;*/
+    .middleLine {
+      height: 6px;
+      width: 35px;
+      border-radius: 5px;
+      background-color: rgb(49, 49, 49);
+      margin: 10px 0px;
+    }
+
   }
 
   .articleContainer {
@@ -78,7 +125,7 @@
 
     article {
       max-width: 50%;
-      padding-bottom: 10%;
+      padding-bottom: 5%;
     }
 
     .knowMe {
@@ -109,6 +156,29 @@
       }
     }
   }
+
+  .pulserAboutMe{
+    width: 20px;
+    height: 40px;
+    border-radius: 60px;
+    border: 2px solid rgb(49, 49, 49);
+    position: relative;
+    margin: 20px 0px 20px 0px;
+  }
+  .pulserAboutMe::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(49, 49, 49);
+    top: 7px;
+    left: 4px;
+    border-radius: 100%;
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   }
 }
 
 #projects {
@@ -118,14 +188,47 @@
   flex-direction: column;
   align-items: center;
   padding-top: 5%;
+  .pulserProject{
+    width: 20px;
+    height: 40px;
+    border-radius: 60px;
+    border: 2px solid rgb(49, 49, 49);
+    position: relative;
+    margin: 20px 0px 20px 0px;
+  }
+  .pulserProject::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(49, 49, 49);
+    top: 7px;
+    left: 4px;
+    border-radius: 100%;
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   }
+
 
   .mainTextProjects {
     text-align: center;
     padding: 5% 10%;
     font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2{
       font-family: 'Bebas Neue', sans-serif;
       font-size: 2em;
+    }
+    .middleLineProjects {
+      height: 6px;
+      width: 35px;
+      border-radius: 5px;
+      background-color: rgb(49, 49, 49);
+      margin: 10px 0px;
     }
   }
 
@@ -133,7 +236,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    
     .projectArticles {
       width: 40vw;
 
@@ -175,14 +278,24 @@
 
   .contactMainText{
     color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       font-size: 3em;
       padding-top: 50px;
       font-family: 'Bebas Neue', sans-serif;
     }
+    .middleLineContact {
+      height: 6px;
+      width: 35px;
+      border-radius: 5px;
+      background-color: whitesmoke;
+      margin: 20px 0px;
+    }
     p {
       font-size: 1.5em;
-      padding: 50px 50px;
+      padding: 20px 50px;
     }
     text-align: center;
   }

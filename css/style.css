@@ -79,6 +79,36 @@ footer span {
   font-size: 6em;
   font-family: "Bebas Neue", sans-serif;
 }
+#homePrincipal .mainText .pulser {
+  width: 20px;
+  height: 40px;
+  margin-top: 40px;
+  border-radius: 60px;
+  border: 2px solid white;
+  position: relative;
+}
+#homePrincipal .mainText .pulser::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #e6e6e6;
+  top: 7px;
+  left: 4px;
+  border-radius: 100%;
+  animation-name: movement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes movement {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
 #homePrincipal .mainText p {
   font-size: 1.5em;
   padding-top: 30px;
@@ -112,16 +142,28 @@ footer span {
 #aboutMe {
   min-height: 100vh;
   background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #aboutMe .introductionBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 10% 10%;
   font-size: 1.5em;
-  /*padding-top: 10%;*/
 }
 #aboutMe .introductionBanner h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2em;
+}
+#aboutMe .introductionBanner .middleLine {
+  height: 6px;
+  width: 35px;
+  border-radius: 5px;
+  background-color: rgb(49, 49, 49);
+  margin: 10px 0px;
 }
 #aboutMe .articleContainer {
   display: flex;
@@ -131,7 +173,7 @@ footer span {
 }
 #aboutMe .articleContainer article {
   max-width: 50%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 #aboutMe .articleContainer .knowMe p {
   margin-bottom: 10%;
@@ -157,6 +199,28 @@ footer span {
 #aboutMe .articleContainer .skills div {
   margin: 10px 0 35px;
 }
+#aboutMe .pulserAboutMe {
+  width: 20px;
+  height: 40px;
+  border-radius: 60px;
+  border: 2px solid rgb(49, 49, 49);
+  position: relative;
+  margin: 20px 0px 20px 0px;
+}
+#aboutMe .pulserAboutMe::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(49, 49, 49);
+  top: 7px;
+  left: 4px;
+  border-radius: 100%;
+  animation-name: movement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
 #projects {
   background-color: #fafafa;
@@ -166,14 +230,46 @@ footer span {
   align-items: center;
   padding-top: 5%;
 }
+#projects .pulserProject {
+  width: 20px;
+  height: 40px;
+  border-radius: 60px;
+  border: 2px solid rgb(49, 49, 49);
+  position: relative;
+  margin: 20px 0px 20px 0px;
+}
+#projects .pulserProject::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgb(49, 49, 49);
+  top: 7px;
+  left: 4px;
+  border-radius: 100%;
+  animation-name: movement;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 #projects .mainTextProjects {
   text-align: center;
   padding: 5% 10%;
   font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #projects .mainTextProjects h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2em;
+}
+#projects .mainTextProjects .middleLineProjects {
+  height: 6px;
+  width: 35px;
+  border-radius: 5px;
+  background-color: rgb(49, 49, 49);
+  margin: 10px 0px;
 }
 #projects .projectContainer {
   display: flex;
@@ -210,6 +306,9 @@ footer span {
 }
 #contact .contactMainText {
   color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 #contact .contactMainText h2 {
@@ -217,9 +316,16 @@ footer span {
   padding-top: 50px;
   font-family: "Bebas Neue", sans-serif;
 }
+#contact .contactMainText .middleLineContact {
+  height: 6px;
+  width: 35px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin: 20px 0px;
+}
 #contact .contactMainText p {
   font-size: 1.5em;
-  padding: 50px 50px;
+  padding: 20px 50px;
 }
 #contact form {
   background-color: #fafafa;
