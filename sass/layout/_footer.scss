@@ -1,6 +1,6 @@
 footer {
     
-    background-image: url(../../img/endlessConstellation.png);
+    background-image: url(../img/endlessConstellation.png);
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,7 @@ footer {
     section {
       display: flex;
       justify-content: space-evenly;
+      width: 100%;
       div{
         h3{
           font-family: 'Bebas Neue', sans-serif;
